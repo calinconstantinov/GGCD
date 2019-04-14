@@ -28,7 +28,7 @@ public class User {
   @Index
   private String name;
 
-  @Relationship(type = "FRIENDS_WITH", direction = Relationship.UNDIRECTED)
+  @Relationship(type = "FRIENDS", direction = Relationship.UNDIRECTED)
   private Set<User> friends = new LinkedHashSet<>();
 
   public User addFriend(User... oneOrMoreFriends) {

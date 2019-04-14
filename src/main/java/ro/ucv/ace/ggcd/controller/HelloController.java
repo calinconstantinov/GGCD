@@ -79,6 +79,33 @@ public class HelloController {
     userRepository.save(participantCreatingService.createParticipant("Razvan", event).addFriend(stAlexandru));
     userRepository.save(participantCreatingService.createParticipant("Cristina", event).addFriend(stAlexandru));
 
+
+    //L
+    User llAlexandru = participantCreatingService.createParticipant("Alexandru", event);
+    User llVicentius = userRepository.save(participantCreatingService.createParticipant("Vicentius", event).addFriend(llAlexandru));
+    userRepository.save(participantCreatingService.createParticipant("Manuela", event).addFriend(llVicentius));
+
+    //U
+    User luSimona = participantCreatingService.createParticipant("Simona", event);
+    User luAlexandru = userRepository.save(participantCreatingService.createParticipant("Alexandru", event).addFriend(luSimona));
+    User luAndra = userRepository.save(participantCreatingService.createParticipant("Andra", event).addFriend(luAlexandru));
+    userRepository.save(participantCreatingService.createParticipant("Corina", event).addFriend(luAndra));
+
+    //M
+    User lmElena = participantCreatingService.createParticipant("Elena", event);
+    User lmAnca = userRepository.save(participantCreatingService.createParticipant("Anca", event).addFriend(lmElena));
+    User lmMadalina = userRepository.save(participantCreatingService.createParticipant("Madalina", event).addFriend(lmAnca));
+    User lmAna = userRepository.save(participantCreatingService.createParticipant("Ana", event).addFriend(lmMadalina));
+    userRepository.save(participantCreatingService.createParticipant("Silvia", event).addFriend(lmAna));
+
+    //E
+    User leRazvan = participantCreatingService.createParticipant("Razvan", event);
+    User leAdrian = userRepository.save(participantCreatingService.createParticipant("Adrian", event).addFriend(leRazvan));
+    User lePatricia = userRepository.save(participantCreatingService.createParticipant("Patricia", event).addFriend(leAdrian));
+    userRepository.save(participantCreatingService.createParticipant("Andreea", event).addFriend(lePatricia));
+    User leVlad = userRepository.save(participantCreatingService.createParticipant("Vlad", event).addFriend(lePatricia));
+    userRepository.save(participantCreatingService.createParticipant("Sergiu", event).addFriend(leVlad));
+
     return "Done!";
   }
 

@@ -8,7 +8,7 @@ import org.neo4j.ogm.annotation.Relationship;
 @Setter
 public class Participant extends User {
 
-  @Relationship(type = "ATTENDING", direction = Relationship.INCOMING)
+  @Relationship(type = "ATTENDING")
   private Event event;
 
 }

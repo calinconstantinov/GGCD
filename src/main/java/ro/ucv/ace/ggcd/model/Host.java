@@ -8,6 +8,6 @@ import org.neo4j.ogm.annotation.Relationship;
 @Setter
 public class Host extends User {
 
-  @Relationship(type = "HOSTING", direction = Relationship.INCOMING)
+  @Relationship(type = "HOSTING")
   private Event event;
 }
