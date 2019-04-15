@@ -61,7 +61,7 @@ MATCH (p:Person)-[:ATTENDING]->(e:Event)
 WHERE e.Country = 'Romania'  
 WITH p  
 MATCH (p)-[:INTERESTED_IN]->(u:Usecase)  
-RETURN u.name as usecase, count(p) as peopleInterested  
+RETURN trim(u.name) as usecase, count(p) as peopleInterested  
 ORDER BY count(p) DESC  
 
 1. _Find the most similar to Calin Persons on the planet_  
